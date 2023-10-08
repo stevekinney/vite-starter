@@ -1,0 +1,31 @@
+{
+  "name": "vite-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "prepare": "husky install",
+    "test": "vitest",
+    "lint": "eslint --fix",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@logux/eslint-config": "52.0.1",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
+    "@vitest/coverage-c8": "0.32.4",
+    "@vitest/ui": "0.34.6",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2",
+    "vite": "4.4.11",
+    "vitest": "0.34.6"
+  }
+}
