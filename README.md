@@ -169,3 +169,139 @@ const render = () => {
 ```
 
 </details>
+
+## Adding CSS
+
+Vite gives a few different ways to add CSS.
+
+1. We can add `<link>` tags as we've done for years.
+2. We can import the CSS files from our JavaScript.
+3. We can use CSS Modules.
+
+### Using a `<link>` tag
+
+Let's start with the most boring, but straight forward of the bunch. Add the following to your HTML.
+
+```html
+<link rel="stylesheet" href="/src/style.css" />
+```
+
+### Importing a Stylesheet
+
+In `counter.js`, we can import a stylesheet.
+
+```js
+import './counter.css';
+```
+
+In both cases, the CSS is loaded globally. The notable difference here is that this CSS file will only be loaded when this module is loaded.
+
+## Using CSS Modules
+
+If you look closely, you'll notice that this CSS is _not_ rendering.
+
+```css
+.count {
+  font-size: 4em;
+  color: rebeccapurple;
+}
+```
+
+This makes sense, because because we don't have anything with that class.
+
+If we give a CSS file a `*.module.css` extension, then we can access its fingerprinted classes.
+
+```js
+import styles from './counter.module.css';
+
+// …
+
+countElement.classList.add(styles.count);
+```
+
+This is the resulting class name.
+
+```html
+<p id="count" class="_count_1o9rn_1">4</p>
+```
+
+### Exercise: Add Banner Styles
+
+Can you use `banner.module.css` as a CSS module?
+
+<details><summary>Solution</details>
+
+```js
+import styles from './banner.module.css';
+
+// …
+
+banner.classList.add(styles.banner);
+closeButton.classList.add(styles.button);
+```
+
+</details>
+
+Notice how the CSS file is also dynamically added to the DOM as needed.
+
+## Using SCSS or Sass
+
+Using SCSS (or Sass) is relatively straight-forward. Consider this change to our CSS.
+
+```scss
+.button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+```
+
+We _could_ change the import to `./banner.module.scss`, but you'll see we get a _very_ easy to resolve error.
+
+> Preprocessor dependency "sass" not found. Did you install it? Try `npm install -D sass`.
+
+Well, I guess we can handle this. That's it. Everything works as expected.
+
+## Using TypeScript
+
+Okay, but let's say you wanted to use TypeScript. That's probably a lot of set up, right?
+
+Just change the file extension to `.ts`. That's it.
+
+## Using TypeScript with CSS Modules
+
+With a few minor changes, `add-banner.ts` works as expected. But, TypeScript is annoyed by the CSS module and the fact that it doesn't know it's type.
+
+We're going to solve for this by using a little library called `typed-css-modules`.
+
+```sh
+npm install -D typed-css-modules
+```
+
+Next, we can run `tcm src` and it will generate a `.d.ts` file for each CSS file.
+
+If you want to keep this running, you can do something like this in your `package.json`.
+
+```json
+{
+  "scripts": {
+    "watch": "vite & tcm --watch src",
+    "check:css": "tcm --listDifferent src"
+  }
+}
+```
+
+Or, if you use husky, you can automate this whenever you commit a change to a CSS file. In `.husky/pre-commit`:
+
+```sh
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run check:css
+```
+
