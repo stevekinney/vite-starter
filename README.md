@@ -156,8 +156,6 @@ const render = () => {
 
 <details><summary>Solution</summary>
 
-We can dynamically load it in a conditional.
-
 ```js
 const render = () => {
   countElement.textContent = count;
