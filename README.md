@@ -304,4 +304,3 @@ Or, if you use husky, you can automate this whenever you commit a change to a CS
 
 npm run check:css
 ```
-
