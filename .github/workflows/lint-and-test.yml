@@ -26,7 +26,7 @@ jobs:
       - name: Checkout and Setup Node
         uses: ./.github/actions/checkout-and-setup
       - name: Lint
-        run: pnpm run --if-present lint
+        run: npm run --if-present lint
   unit-tests:
     runs-on: ubuntu-latest
     steps:
@@ -34,7 +34,7 @@ jobs:
       - name: Checkout and Setup Node
         uses: ./.github/actions/checkout-and-setup
       - name: Run Unit Tests
-        run: pnpm test
+        run: npm test
   build:
     runs-on: ubuntu-latest
     steps:
@@ -42,4 +42,4 @@ jobs:
       - name: Checkout and Setup Node
         uses: ./.github/actions/checkout-and-setup
       - name: Build
-        run: pnpm run --if-present build
+        run: npm run --if-present build
