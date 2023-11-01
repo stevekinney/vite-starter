@@ -1,7 +1,7 @@
-export const initializeCounter = () => {
-  const countElement = document.getElementById('count');
-  const incrementButton = document.getElementById('increment');
-  const decrementButton = document.getElementById('decrement');
+export const initializeCounter = (doc = globalThis.document) => {
+  const countElement = doc.getElementById('count');
+  const incrementButton = doc.getElementById('increment');
+  const decrementButton = doc.getElementById('decrement');
 
   let count = 0;
 

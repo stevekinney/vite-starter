@@ -12,17 +12,20 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite Starter</title>
+    <title>Vite Counter</title>
   </head>
   <body>
     <div id="root">
-      <h1 class="greeting">Hello Vite!</h1>
-      <section class="application">
+      <header>
         <h2 class="counter-title">Counter</h2>
-        <p id="count">0</p>
-        <button id="increment">Increment</button>
-        <button id="decrement">Decrement</button>
-      </section>
+      </header>
+      <main class="application">
+        <p id="count" class="count">0</p>
+        <div class="buttons">
+          <button id="increment">Increment</button>
+          <button id="decrement">Decrement</button>
+        </div>
+      </main>
     </div>
   </body>
 </html>

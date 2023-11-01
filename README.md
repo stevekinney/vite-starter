@@ -225,9 +225,10 @@ This is the resulting class name.
 <p id="count" class="_count_1o9rn_1">4</p>
 ```
 
-### Exercise: Add Banner Styles
+### Exercise: Add Banner
 
-Can you use `banner.module.css` as a CSS module?
+- Can you add an additional script that shows a banner or an alert when the count gets below zero?
+- Can you use `banner.module.css` as a CSS module?
 
 <details><summary>Solution</details>
 
