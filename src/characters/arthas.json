@@ -1,0 +1,13 @@
+{
+  "name": "Arthas",
+  "characterClass": "Paladin",
+  "strength": 18,
+  "dexterity": 12,
+  "wisdom": 15,
+  "intelligence": 10,
+  "constitution": 16,
+  "hitPoints": 45,
+  "mana": 30,
+  "funFact": "Never skips leg day.",
+  "items": ["Longsword", "Shield", "Potion of Healing"]
+}

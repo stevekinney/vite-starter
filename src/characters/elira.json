@@ -1,0 +1,13 @@
+{
+  "name": "Elira",
+  "characterClass": "Rogue",
+  "strength": 14,
+  "dexterity": 18,
+  "wisdom": 12,
+  "intelligence": 16,
+  "constitution": 12,
+  "hitPoints": 35,
+  "mana": 20,
+  "funFact": "Can pickpocket someone while looking them in the eye.",
+  "items": ["Dagger", "Lockpick Set", "Smoke Bomb"]
+}

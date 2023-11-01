@@ -1,0 +1,13 @@
+{
+  "name": "Morduk",
+  "characterClass": "Barbarian",
+  "strength": 20,
+  "dexterity": 10,
+  "wisdom": 9,
+  "intelligence": 8,
+  "constitution": 18,
+  "hitPoints": 50,
+  "mana": 10,
+  "funFact": "Can arm-wrestle a troll and win.",
+  "items": ["Battle Axe", "Bearskin Cloak", "Rations"]
+}

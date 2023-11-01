@@ -1,0 +1,13 @@
+{
+  "name": "Gandorf",
+  "characterClass": "Wizard",
+  "strength": 8,
+  "dexterity": 14,
+  "wisdom": 16,
+  "intelligence": 18,
+  "constitution": 10,
+  "hitPoints": 25,
+  "mana": 40,
+  "funFact": "Has a pet owl named Merlin.",
+  "items": ["Spellbook", "Wand", "Arcane Gem"]
+}

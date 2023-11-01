@@ -1,0 +1,13 @@
+{
+  "name": "Kaela",
+  "characterClass": "Ranger",
+  "strength": 16,
+  "dexterity": 17,
+  "wisdom": 14,
+  "intelligence": 12,
+  "constitution": 13,
+  "hitPoints": 37,
+  "mana": 25,
+  "funFact": "Makes her own arrows from enchanted wood.",
+  "items": ["Longbow", "Quiver", "Camouflage Cloak"]
+}
