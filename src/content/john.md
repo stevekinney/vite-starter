@@ -1,5 +1,5 @@
 ---
-title: George Harrison's Biography
+title: John Lennon's Biography
 instrument: guitar
 ---
 
