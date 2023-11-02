@@ -1,6 +1,8 @@
-import image from './favicon-16x16.png';
+import image from './steve-after-a-workshop.jpg?h=400&format=webp';
 
 const content = document.querySelector('#content');
+
+console.log('image', image);
 
 export default function loadImage() {
   const imageElement = document.createElement('img');

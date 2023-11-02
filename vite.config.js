@@ -1,9 +1,6 @@
 import { defineConfig } from 'vite';
+import { imagetools } from 'vite-imagetools';
 
 export default defineConfig({
-  css: {
-    postcss: {
-      map: true,
-    },
-  },
+  plugins: [imagetools()],
 });
